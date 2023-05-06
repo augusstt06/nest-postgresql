@@ -58,16 +58,6 @@ $ npm run test:e2e
 $ npm run test:cov
 ```
 
-## Support
+## Reference
 
-Nest is an MIT-licensed open source project. It can grow thanks to the sponsors and support by the amazing backers. If you'd like to join them, please [read more here](https://docs.nestjs.com/support).
-
-## Stay in touch
-
-- Author - [Kamil Myśliwiec](https://kamilmysliwiec.com)
-- Website - [https://nestjs.com](https://nestjs.com/)
-- Twitter - [@nestframework](https://twitter.com/nestframework)
-
-## License
-
-Nest is [MIT licensed](LICENSE).
+[Velog 참고 링크](https://velog.io/@nuri00/Nest.js-typeorm%EC%9C%BC%EB%A1%9C-DB-%EC%97%B0%EA%B2%B0%ED%95%98%EA%B8%B0)
