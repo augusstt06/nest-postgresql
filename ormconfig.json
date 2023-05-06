@@ -1,0 +1,22 @@
+{
+  "type": "postgres",
+  "host": "localhost",
+  "port": 5432,
+  "username": "postgres",
+  "password": "postgres",
+  "database": "board_db",
+  "extra": {
+    "ssl": {
+      "rejectUnauthorized": false
+    }
+  },
+  "synchronize": true,
+  "logging": false,
+  "entities": ["server/**/*.entity.ts"],
+  "migrations": ["server/migration/**/*.ts"],
+  "subscribers": ["server/subscriber/**/*.ts"],
+  "cli": {
+    "migrationsDir": "server/migration",
+    "subscribersDir": "server/subscriber"
+  }
+}
