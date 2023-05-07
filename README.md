@@ -61,3 +61,5 @@ $ npm run test:cov
 ## Reference
 
 [Velog 참고 링크](https://velog.io/@nuri00/Nest.js-typeorm%EC%9C%BC%EB%A1%9C-DB-%EC%97%B0%EA%B2%B0%ED%95%98%EA%B8%B0)
+
+[crud](https://velog.io/@nuri00/Nest.js%EB%A1%9C-CRUD-%EA%B5%AC%ED%98%84%ED%95%98%EA%B8%B0)
