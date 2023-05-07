@@ -7,7 +7,7 @@ import { Board } from './board.entity';
 export class BoardController {
   constructor(private readonly boardService: BoardService) {}
   @Get()
-  getAllBoards(): string {
+  getAllBoards(): Promise<Board[]> {
     return this.boardService.AllBoards();
   }
 

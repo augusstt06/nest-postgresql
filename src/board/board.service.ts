@@ -9,8 +9,8 @@ export class BoardService {
     @Inject('BOARD_REPOSITORY')
     private boardRepository: Repository<Board>,
   ) {}
-  AllBoards(): string {
-    return 'All Boards return';
+  AllBoards(): Promise<Board[]> {
+    return this.boardRepository.find({});
   }
   async create(createBoardDto: CreateBoardDto): Promise<Board> {
     const { title, description } = createBoardDto;
