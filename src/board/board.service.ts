@@ -1,7 +1,8 @@
-import { Inject, Injectable } from '@nestjs/common';
+import { Inject, Injectable, NotFoundException } from '@nestjs/common';
 import { Repository } from 'typeorm';
 import { Board } from './board.entity';
 import { CreateBoardDto } from 'src/dto/create-board.dto';
+import { UpdateBoardDto } from 'src/dto/update-board.dto';
 
 @Injectable()
 export class BoardService {
@@ -20,5 +21,22 @@ export class BoardService {
     });
     await this.boardRepository.save(board);
     return board;
+  }
+  async update(id: number, updateBoardDto: UpdateBoardDto): Promise<Board> {
+    const board = await this.boardRepository.findOne({
+      where: {
+        id,
+      },
+    });
+    if (!board) {
+      throw new NotFoundException('해당 id의 게시글이 없습니다.');
+    }
+    await this.boardRepository.update(id, updateBoardDto);
+    const updateBoard = await this.boardRepository.findOne({
+      where: {
+        id,
+      },
+    });
+    return updateBoard;
   }
 }
