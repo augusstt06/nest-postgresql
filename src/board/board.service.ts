@@ -39,4 +39,10 @@ export class BoardService {
     });
     return updateBoard;
   }
+  async delete(id: number) {
+    const result = await this.boardRepository.delete(id);
+    if (result.affected === 0) {
+      throw new NotFoundException('해당 id의 게시글이 없습니다.');
+    }
+  }
 }
